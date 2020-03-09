@@ -3,7 +3,7 @@ package custom_card_creator;
 //Creator :   Cody Asher
 
 
-public class CustomCardText {
+public class customCardText {
 	
 		//variables for the cords of the text in relation to the card. (i believe its specifically upper left corner?)
 		int xCord;
@@ -16,7 +16,7 @@ public class CustomCardText {
 	    String font;
 		
 	//CustomCardText constructor
-	public CustomCardText(int x, int y, String userText, String fName) {
+	public customCardText(int x, int y, String userText, String fName) {
 		xCord = x;
 		yCord = y;
 		customText = userText;
