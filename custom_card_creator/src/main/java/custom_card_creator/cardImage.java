@@ -22,16 +22,16 @@ public class cardImage {
 	File file = null;
 	JFileChooser chooser = new JFileChooser();
 	BufferedImageOp op;
+	int y;
+	int x;
+	
 	public void readURLImage(String usrInput) //This method reads a URL that is directed to an image. It then pulls and stores it.
 	{
 		this.input = usrInput;
 		try {	
-			url = new URL(input);			
-		}catch(MalformedURLException e) {
-			e.printStackTrace();
-		}
-		try {
+			url = new URL(input);		
 			image = ImageIO.read(url);
+			
 		}catch(IOException e1) {
 			e1.printStackTrace();
 		}
@@ -63,5 +63,15 @@ public class cardImage {
 		g.drawImage(rs, 0, 0,null);
 		image = this.image;
 		return cpy;
+	}
+	public void setCoordinates(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+	public int getYCoordinates() {
+		return this.y;
+	}
+	public int getXCoordinates() {
+		return this.x;
 	}
 }
