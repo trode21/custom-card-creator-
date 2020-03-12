@@ -15,7 +15,7 @@ import java.awt.Graphics;
 
 //This class in intended to recieve and store an image from the user for the card. If the image does not use the correct parameters it also crops the pictures so they may still
 //fit the space provided.
-public class cardImage {
+public class CardImage {
 	BufferedImage image = null;
 	URL url = null;
 	String input;
@@ -51,7 +51,7 @@ public class cardImage {
 			e.printStackTrace();
 		}
 		BufferedImage img1;
-		cardImage ic1 = new cardImage();
+		CardImage ic1 = new CardImage();
 		img1 = ic1.resizeImage(1024, 1024, this.image);
 		return img1;
 	}
