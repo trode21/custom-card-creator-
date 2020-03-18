@@ -24,6 +24,9 @@ public class CardImage {
 	BufferedImageOp op;
 	int y;
 	int x;
+	public CardImage(BufferedImage image) {
+		this.image = image;
+	}
 	
 	public void readURLImage(String usrInput) //This method reads a URL that is directed to an image. It then pulls and stores it.
 	{
@@ -51,7 +54,7 @@ public class CardImage {
 			e.printStackTrace();
 		}
 		BufferedImage img1;
-		CardImage ic1 = new CardImage();
+		CardImage ic1 = new CardImage(this.image);
 		img1 = ic1.resizeImage(1024, 1024, this.image);
 		return img1;
 	}
