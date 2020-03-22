@@ -77,4 +77,7 @@ public class CardImage {
 	public int getXCoordinates() {
 		return this.x;
 	}
+	public BufferedImage getImage() {
+		return image;
+	}
 }
