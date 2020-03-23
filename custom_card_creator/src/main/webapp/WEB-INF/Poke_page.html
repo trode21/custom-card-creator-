@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Custom Pokémon Card!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="Poke_page.css">
+    
+    <script src="Poke_script.js">
+    </script>
+    
+</head>
+    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Custom Card Creator</a>
+    </div>
+    <ul class="nav navbar-nav">
+     
+       <li class="#"><a href="Untitled-2.html">Pokemon</a></li> 
+      <li><a href="#">Magic</a></li>
+         <li><a href="#">Yugioh</a></li>
+         <li><a href="#">Custom</a></li>
+           <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">More Templates <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">OU Grizzcards</a></li>
+          <li><a href="#">Fake ID's</a></li>
+          <li><a href="#">Bussiness Cards</a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+
+  </nav>
+<body>
+    <div class="container">
+        <div class="left-element">
+<form id="menu">
+    <h1>Design your own card!!</h1>
+    <h5>Fill out the form below</h5>
+    <fieldset>
+    <legend>Card Base</legend>
+        <table>
+            <tr>
+        <td>Select Your Pokémon's type:</td>
+        <td><select id="select">
+            <option>Dark</option>
+            <option>Dragon</option>
+            <option>Electric</option>
+            <option>Fairy</option>
+            <option>Fighting</option>
+            <option>Fire</option>
+            <option>Grass</option>
+            <option>Normal</option>
+            <option>Psychic</option>
+            <option>Steel</option>
+            <option>Water</option>
+            </select>
+         </td>
+        </tr>
+            <tr>
+                <td><br /><input type="file" accept="image/*"  onchange="showMyImage(this)" />
+                    <img id="thumbnil" src="http://via.placeholder.com/347x230" >
+</td></tr>
+        </table>
+    </fieldset>
+    <fieldset>
+        <legend>Card Values</legend>
+        <table>
+            <tr>
+            <td>Pokémon HP:</td>
+            <td><input type="text" id="HP" size="1" maxlength="3"></td>
+            </tr>
+                <td><p>Pokémon Name:</p></td>
+                <td><input  type="text" id="name" size="10" maxlength="13"></td>
+        </table>
+    </fieldset>
+    <fieldset>
+    <legend>Ability 1</legend>
+        <table>
+        <tr>
+        <td><p>Ability Name:</p></td>
+            <td><input type="text" id="abil1"></td>
+        </tr>
+        <tr>
+            <td><p>Ability Description:</p></td>
+        <td><textarea id="abilDesc1"></textarea></td>
+        </tr>
+        </table>
+    </fieldset>
+    <fieldset>
+    <legend>Ability 2</legend>
+        <table>
+        <tr>
+        <td><p>Ability Name:</p></td>
+            <td><input type="text" id="abil2"></td>
+        </tr>
+        <tr>
+            <td><p>Ability Description:</p></td>
+        <td><textarea id="abilDesc2"></textarea></td>
+        </tr>
+        </table>
+    </fieldset>
+    <fieldset>
+    <legend>Extra Information</legend>
+        <table>
+    <tr>
+    <td>Weakness:</td>
+        <td><input type="text" id="weakness" size="10"></td>
+    </tr>
+        <tr>
+            <td>Resistance:</td>
+        <td><input type="text" id="resist" size="10"></td>
+        </tr>
+            <tr>
+            <td>Retreat cost:</td>
+        <td><input type="text" id="retreat" size="10"></td>
+        </tr>
+            <tr>
+            <td>Etc:</td>
+        <td><input type="text" id="extra" size="10"></td>
+        </tr>
+        </table>
+    </fieldset>
+    <table>
+        <tr>
+            <td><button type ="button" id="sub" onclick="addText()" name="submit">Submit!</button></td>
+            <td><input type="reset" id="res" name="reset"></td>
+        </tr>
+    </table>
+    </form>
+    </div>
+        <div class="right-element">
+    <img src="images/normal.png" id="cardtype">
+            
+            
+            <!-- card paragraph nodes -->
+            <p id="cardHP"></p>
+            <p id="cardName"></p>
+            <p id="a1"></p>
+            <p id="adesc1"></p>
+            <p id="a2"></p>
+            <p id="adesc2"></p>
+            <p id="weak"></p>
+            <p id="resis"></p>
+            <p id="retr"></p>
+            <p id="etc"></p>
+            
+         
+        </div>
+    </div>
+    </body>
+</html>
