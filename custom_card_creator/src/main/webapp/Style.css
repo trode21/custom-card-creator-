@@ -1,9 +1,10 @@
 /*img-show*/
 
 body{
-
-margin: 0;
-
+background-image: url(images/EeveeBG.jpg);
+background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 .slidershow{
   width: 300px;
@@ -12,8 +13,8 @@ margin: 0;
 }
 .middle{
   position: absolute;
-  top: 400%;
-  left: 50%;
+  top: 900%;
+  left: 45%;
   transform: translate(-50%,-50%);
 }
 .navigation{
@@ -26,13 +27,13 @@ margin: 0;
 .bar{
   width: 50px;
   height: 10px;
-  border: 2px solid #000;
+  border: 2px solid black;
   margin: 6px;
   cursor: pointer;
   transition: 0.4s;
 }
 .bar:hover{
-  background: #000;
+  background: white;
 }
 
 input[name="r"]{
@@ -76,6 +77,7 @@ input[name="r"]{
 
 
 /*footer*/
+
 
 
 
