@@ -1,6 +1,5 @@
 body    {
-   
-    background-repeat: no-repeat;
+    background-repeat: off;
     background-image: url("http://getwallpapers.com/wallpaper/full/0/1/e/1140991-download-free-cool-pokemon-wallpapers-1920x1080-htc.jpg");
 }
 #menu   {
@@ -52,8 +51,9 @@ fieldset    {
 }
 
 .right-element {
+    position: absolute;
+    margin-left: 750px;
     float: left;
-    margin-left: 300px;
     margin-top: 200px;
 }
 #cardHP {
@@ -148,11 +148,9 @@ fieldset    {
 }
 #thumbnil
 {position: absolute;
-z-index: 100;
 top: 261px;
 left: 787px;
 width: 347px;
     height: 230px;
     border-radius: 1px;
-    z-index: 90;
 }
