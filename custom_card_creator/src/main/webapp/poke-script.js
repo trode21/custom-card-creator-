@@ -26,7 +26,7 @@ function addText() {
     document.getElementById("retr").innerHTML = retreat;
     document.getElementById("etc").innerHTML = etc;
     
-    document.getElementById("cardtype").src="resources/pokemonTemplates" + type.toLowerCase() + ".png";
+    document.getElementById("cardtype").src="resources/pokemonTemplates/" + type.toLowerCase() + ".png";
 }
 
 //showing image on card
