@@ -52,15 +52,15 @@ fieldset    {
 
 .right-element {
     position: absolute;
-    margin-left: 750px;
+    margin-left:700px;
     float: left;
-    margin-top: 200px;
+    margin-top:115px;
 }
 #cardHP {
     position: absolute;
     z-index: 100;
-    top: 225px;
-    left: 1057px;
+    top: 145px;
+    left: 1090px;
     font-size: 20px;
     text-align: right;
     width: 60px;
@@ -69,8 +69,8 @@ fieldset    {
 #cardName {
     position: absolute;
     z-index: 100;
-    top: 220px;
-    left: 850px;
+    top: 145px;
+    left: 820px;
     font-size: 25px;
     font-weight: bold;
     font-family: "Times New Roman", Times, serif;
@@ -79,7 +79,7 @@ fieldset    {
     position: absolute;
     z-index: 100;
     top: 503px;
-    left: 800px;
+    left: 750px;
     font-size: 20px;
     font-family: "Times New Roman", Times, serif;
     font-weight: bold;
@@ -87,8 +87,8 @@ fieldset    {
 #adesc1 {
     position: absolute;
     z-index: 100;
-    top: 525px;
-    left: 800px;
+    top: 530px;
+    left: 750px;
     font-size: 15px;
     width: 350px;
     font-family: "Times New Roman", Times, serif;
@@ -97,7 +97,7 @@ fieldset    {
     position: absolute;
     z-index: 100;
     top: 585px;
-    left: 800px;
+    left: 750px;
     font-size: 20px;
     font-weight: bold;
     font-family: "Times New Roman", Times, serif;
@@ -105,8 +105,8 @@ fieldset    {
 #adesc2 {
     position: absolute;
     z-index: 100;
-    top: 610px;
-    left: 800px;
+    top: 615px;
+    left: 750px;
     font-size: 15px;
     width: 350px;
     font-family: "Times New Roman", Times, serif;
@@ -114,43 +114,43 @@ fieldset    {
 #weak {
     position: absolute;
     z-index: 100;
-    top: 685px;
-    left: 792px;
-    font-size: 13px;
+    top: 715px;
+    left: 750px;
+    font-size: 15px;
     font-family: "Times New Roman", Times, serif;
 }
 #resis {
     position: absolute;
     z-index: 100;
-    top: 685px;
-    left: 870px;
-    font-size: 13px;
+    top: 715px;
+    left: 840px;
+    font-size: 15px;
     font-family: "Times New Roman", Times, serif;
 }
 #retr {
     position: absolute;
     z-index: 100;
-    top: 720px;
-    left: 792px;
-    font-size: 13px;
+    top: 760px;
+    left: 750px;
+    font-size: 15px;
     font-family: "Times New Roman", Times, serif;
     
 }
 #etc {
     position: absolute;
     z-index: 100;
-    top: 705px;
-    left: 978px;
-    font-size: 13px;
-    height: 30px;
-    width:120px;
+    top: 745px;
+    left: 980px;
+    font-size: 15px;
+    height: 50px;
+    width:150px;
     font-family: "Times New Roman", Times, serif;
 }
 #thumbnil
 {position: absolute;
-top: 261px;
-left: 787px;
-width: 347px;
-    height: 230px;
+top: 191px;
+left: 746px;
+width: 434px;
+    height: 289px;
     border-radius: 1px;
 }
