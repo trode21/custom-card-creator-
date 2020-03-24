@@ -154,4 +154,5 @@ left: 787px;
 width: 347px;
     height: 230px;
     border-radius: 1px;
+    z-index: 90;
 }
