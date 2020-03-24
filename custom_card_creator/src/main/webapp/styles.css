@@ -1,7 +1,7 @@
 /*img-show*/
 
 body{
-background-image: url(images/EeveeBG.jpg);
+background-image: url(src/main/webapp/resources/frontPageImages/EeveeBG.jpg);
 background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
