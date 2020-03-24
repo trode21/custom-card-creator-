@@ -48,12 +48,10 @@ fieldset    {
 }
 
 .left-element {
-    display: inline-block;
     float: left;
 }
 
 .right-element {
-    display: inline-block;
     float: left;
     margin-left: 300px;
     margin-top: 200px;
