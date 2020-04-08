@@ -30,7 +30,6 @@ public class ImageFactory {
 		//Loads template from src/main/webapp/resources/[Pokemon/Yugioh/Whatever]Templates/[type].png
 		BufferedImage template = ImageIO.read(new File("/custom_card_creator/src/main/webapp/resources/"+templateName+"Templates"+"/"+typeName+".png"));
 		CardImage cImage = new CardImage (mainImage);
-		CustomCardText cText = new CustomCardText(x, y, typeName);
 		int w = template.getWidth();
 		int h = template.getHeight();
 		//Creates a blank image equal in size to the template loaded
@@ -104,5 +103,6 @@ public class ImageFactory {
 		ReadableByteChannel channel = Channels.newChannel(url.openStream());
 		FileOutputStream output = new FileOutputStream(target);
 		output.getChannel().transferFrom(channel, 0	, Long.MAX_VALUE);
+		output.close();
 	}
 }
