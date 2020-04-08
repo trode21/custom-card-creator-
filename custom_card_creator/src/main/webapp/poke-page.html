@@ -40,7 +40,7 @@
 <body>
     <div class="container">
         <div class="left-element">
-<form id="menu">
+<form id="menu" method="post" action="pokeServlet">
     <h1>Design your own card!!</h1>
     <h5>Fill out the form below</h5>
     <fieldset>
@@ -48,7 +48,7 @@
         <table>
             <tr>
         <td>Select Your Pokemon's type:</td>
-        <td><select id="select">
+        <td><select id="select" name="type">
             <option>Dark</option>
             <option>Dragon</option>
             <option>Electric</option>
@@ -64,7 +64,7 @@
          </td>
         </tr>
             <tr>
-                <td><br /><input type="file" accept="image/*"  onchange="showMyImage(this)" />
+                <td><br /><input name="image" type="file" accept="image/*"  onchange="showMyImage(this)" />
                     <img id="thumbnil" src="http://via.placeholder.com/434x289" >
 </td></tr>
         </table>
@@ -74,11 +74,11 @@
         <table>
             <tr>
             <td>Pokemon HP:</td>
-            <td><input type="text" id="HP" size="1" maxlength="3"></td>
+            <td><input type="text" id="HP" name="HP" size="1" maxlength="3"></td>
             </tr>
             <tr>
                 <td><p>Pokemon Name:</p></td>
-                <td><input  type="text" id="name" size="15" maxlength="20"></td>
+                <td><input  type="text" id="name" name="name" size="15" maxlength="20"></td>
             </tr>
         </table>
     </fieldset>
@@ -87,11 +87,11 @@
         <table>
         <tr>
         <td><p>Ability Name:</p></td>
-            <td><input type="text" id="abil1"></td>
+            <td><input type="text" id="abil1" name="abil1"></td>
         </tr>
         <tr>
             <td><p>Ability Description:</p></td>
-        <td><textarea id="abilDesc1"></textarea></td>
+        <td><textarea id="abilDesc1" name="abilDesc1"></textarea></td>
         </tr>
         </table>
     </fieldset>
@@ -100,11 +100,11 @@
         <table>
         <tr>
         <td><p>Ability Name:</p></td>
-            <td><input type="text" id="abil2"></td>
+            <td><input type="text" id="abil2" name="abil2"></td>
         </tr>
         <tr>
             <td><p>Ability Description:</p></td>
-        <td><textarea id="abilDesc2"></textarea></td>
+        <td><textarea id="abilDesc2" name="abilDesc2"></textarea></td>
         </tr>
         </table>
     </fieldset>
@@ -113,19 +113,19 @@
         <table>
     <tr>
     <td>Weakness:</td>
-        <td><input type="text" id="weakness" size="10"></td>
+        <td><input type="text" id="weakness" size="10" name="weakness"></td>
     </tr>
         <tr>
             <td>Resistance:</td>
-        <td><input type="text" id="resist" size="10"></td>
+        <td><input type="text" id="resist" size="10" name="resist"></td>
         </tr>
             <tr>
             <td>Retreat cost:</td>
-        <td><input type="text" id="retreat" size="10"></td>
+        <td><input type="text" id="retreat" size="10" name="retreat"></td>
         </tr>
             <tr>
             <td>Etc:</td>
-        <td><input type="text" id="extra" size="10"></td>
+        <td><input type="text" id="extra" size="10" name="etc"></td>
         </tr>
         </table>
     </fieldset>
@@ -133,6 +133,7 @@
         <tr>
             <td><button type ="button" id="sub" onclick="addText()" name="submit">Submit!</button></td>
             <td><input type="reset" id="res" name="reset"></td>
+            <td><input type="submit" value="Download">
         </tr>
     </table>
     </form>
