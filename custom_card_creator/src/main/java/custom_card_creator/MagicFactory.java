@@ -19,16 +19,10 @@ public class MagicFactory {
 		
 		CardImage cImage = new CardImage(mainImage);
 		
-		CustomCardText cText = new CustomCardText(x,y,typeName,"Arial");
-		
 		BufferedImage builtImage = new BufferedImage(w,h,BufferedImage.TYPE_INT_ARGB);
 		Graphics worker = builtImage.getGraphics();
-		worker.drawImage(template, 0, 0, null);
-		worker.drawString(templateName, 0,0);
-		
-		if("Magic".equals(templateName)) {
-			worker.drawImage(cImage.resizeImage(430 , 320, cImage.getImage()), 46, 80, null);
-		}
+		worker.drawImage(cImage.resizeImage(430 , 320, cImage.getImage()), 46, 80, null);
+
 		ImageIO.write(builtImage, "PNG", new File("/custom_card_creator/src/main/java/custom_card_creator/localCards/", "builtMagic.png"));
 	}
 }
