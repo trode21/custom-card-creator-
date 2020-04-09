@@ -4,7 +4,8 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import javax.imageio.ImageIO;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,6 +18,7 @@ public class PokemonFactory extends HttpServlet{
 	protected void buildImage(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException
 			{
+		//Requests the information the user enters into the web site to be used in the creation of the image file.
 		BufferedImage mainImage = (BufferedImage) request.getAttribute("image");
 		
 		String templateName = "Pokemon";
@@ -38,7 +40,7 @@ public class PokemonFactory extends HttpServlet{
 		int h = template.getWidth();
 	
 		CardImage cImage = new CardImage(mainImage);
-	
+	    //Draws all the above parameters onto the built image.
 		BufferedImage builtImage = new BufferedImage(w,h,BufferedImage.TYPE_INT_ARGB);
 		Graphics worker = builtImage.getGraphics();
 		worker.drawImage(cImage.resizeImage(434, 286, cImage.getImage()), 46, 80, null);
@@ -53,9 +55,11 @@ public class PokemonFactory extends HttpServlet{
 		worker.drawString(weakness, 49,604);
 		worker.drawString(description, 279,634);
 		worker.drawLine(49, 456, 525, 738);
-
-
-		ImageIO.write(builtImage, "PNG", new File("/custom_card_creator/src/main/java/custom_card_creator/localCards/", "builtPokimon.png"));
-
+		//Allows us to dynamically store files giving the date alongside what type of card they are.
+		SimpleDateFormat time = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+		//Writes a file to our database which allows for the user to then pull using a download button front end to then keep their image.
+		ImageIO.write(builtImage, "PNG", new File("/custom_card_creator/src/main/java/custom_card_creator/localCards/", "Pokemon - " + time.format(Calendar.getInstance()) + ".png"));
+		
+		
 	}
 }
