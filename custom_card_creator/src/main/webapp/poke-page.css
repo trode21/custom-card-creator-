@@ -1,6 +1,7 @@
 body    {
     background-repeat: off;
     background-image: url("http://getwallpapers.com/wallpaper/full/0/1/e/1140991-download-free-cool-pokemon-wallpapers-1920x1080-htc.jpg");
+    
 }
 #menu   {
     background-color: lightgrey;
@@ -40,7 +41,7 @@ fieldset    {
     margin-left: -35px;
 }
 .container {
-    position: fixed;
+    position: absolute;
     left: 5px;
     padding: 0;
     margin: 0;
@@ -153,4 +154,9 @@ left: 746px;
 width: 434px;
     height: 289px;
     border-radius: 1px;
+}
+#compile {
+    position: absolute;
+    bottom: 5px;
+    left: 370px;
 }

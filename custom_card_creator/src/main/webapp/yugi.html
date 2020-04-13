@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Custom Yugioh Card!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="yugi.css">
+    
+    <script src="yugi.js">
+    </script>
+    
+</head>
+    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Custom Card Creator</a>
+    </div>
+    <ul class="nav navbar-nav">
+     
+       <li class="#"><a href="Poke-Page.html">Pokemon</a></li> 
+      <li><a href="#">Magic</a></li>
+         <li><a href="yugi.html">Yugioh</a></li>
+         <li><a href="#">Custom</a></li>
+           <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">More Templates <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">OU Grizzcards</a></li>
+          <li><a href="#">Fake ID's</a></li>
+          <li><a href="#">Bussiness Cards</a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="About_us.html"><span class=""></span> About us </a></li>
+    
+        </ul>
+     </div>
+   </nav>  
+<body>
+    <div class="container">
+        <div class="left-element">
+<form id="menu" method="post" action="yugiServlet" enctype="multipart/form-data">
+    <h1>Design your own card!!</h1>
+    <h5>Fill out the form below</h5>
+    <fieldset>
+    <legend>Card Base</legend>
+        <table>
+            <tr>
+        <td>Select the type of Yugioh Card:</td>
+        <td><select id="select" name="type">
+            <option>Monster</option>
+            <option>Spell</option>
+            <option>Trap</option>
+            </select>
+         </td>
+        </tr>
+            <tr>
+                <td><br /><p>Upload image:</p><input name="image" type="file" accept="image/*"  onchange="showMyImage(this)" />
+                    <img id="thumbnil" src="http://via.placeholder.com/375x366" >
+</td></tr>
+        </table>
+    </fieldset>
+    <fieldset>
+        <legend>Card Values</legend>
+        <table>
+            <tr>
+            <td>Monster Attack:</td>
+            <td><input type="text" id="attack" name="attack" size="2" maxlength="4"></td>
+            </tr>
+            <tr>
+            <td>Monster Defense:</td>
+            <td><input type="text" id="defense" name="defense" size="2" maxlength="4"></td>
+            </tr>
+            <tr>
+                <td><p>Card Name:</p></td>
+                <td><input  type="text" id="name" name="name" size="15" maxlength="22"></td>
+            </tr>
+        </table>
+    </fieldset>
+    <fieldset>
+    <legend>Flavor text</legend>
+        <table>
+        <tr>
+        <td><p>Monster Type:</p></td>
+            <td><input type="text" id="monType" name="type"></td>
+        </tr>
+        <tr>
+            <td><p>Card Description:</p></td>
+        <td><textarea id="desc" name="desc"></textarea></td>
+        </tr>
+        </table>
+    </fieldset>
+
+    <table>
+        <tr>
+            <td><button type ="button" id="sub" onclick="addText()" name="submit">Preview!</button></td>
+            <td><input type="reset" id="res" name="reset"></td>
+            <td><input type="submit" value="Compile" id="download" onclick="download"></td>
+        </tr>
+    </table>
+    </form>
+    </div>
+        <div class="right-element">
+    <img src="/custom-card-creator/resources/yugiohTemplates/monster.png" id="cardpic">
+                    </div>
+            
+            <!-- card paragraph nodes -->
+            <p id="atkDef"></p>
+            <p id="cardName"></p>
+            <p id="typeText"></p>
+            <p id="cardDesc"></p>
+            
+            
+         
+
+    </div>
+    </body>
+</html>

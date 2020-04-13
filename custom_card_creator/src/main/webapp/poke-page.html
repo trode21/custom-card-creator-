@@ -20,14 +20,14 @@
      
        <li class="#"><a href="Poke_Page.html">Pokeman</a></li> 
       <li><a href="#">Magic</a></li>
-         <li><a href="#">Yugioh</a></li>
+         <li><a href="yugi.html">Yugioh</a></li>
          <li><a href="#">Custom</a></li>
            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">More Templates <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="#">OU Grizzcards</a></li>
           <li><a href="#">Fake ID's</a></li>
           <li><a href="#">Bussiness Cards</a></li>
-        </ul>
+        </ul> 
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
@@ -39,7 +39,7 @@
 <body>
     <div class="container">
         <div class="left-element">
-<form id="menu" method="post" action="pokeServlet">
+<form id="menu" method="post" action="pokeServlet" enctype="multipart/form-data">
     <h1>Design your own card!!</h1>
     <h5>Fill out the form below</h5>
     <fieldset>
@@ -130,9 +130,9 @@
     </fieldset>
     <table>
         <tr>
-            <td><button type ="button" id="sub" onclick="addText()" name="submit">Submit!</button></td>
+            <td><button type ="button" id="sub" onclick="addText()" name="submit">Preview!</button></td>
             <td><input type="reset" id="res" name="reset"></td>
-            <td><input type="submit" value="Download">
+            <td><input type="submit" value="Compile" id="compile"></td>
         </tr>
     </table>
     </form>
