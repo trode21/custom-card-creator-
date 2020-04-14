@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("magicServlet")
+@WebServlet("/magicServlet")
 public class MagicFactory extends HttpServlet {
     public void buildImage(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException
