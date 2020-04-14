@@ -1,0 +1,118 @@
+body    {
+    background-repeat: off;
+    background-image: url("https://images5.alphacoders.com/967/967270.png");
+    background-size: 1920px 1080px;
+    
+}
+#menu   {
+    background-color: lightgrey;
+    width: 400px;
+    height: 60%;
+    border: 3px solid #000000;
+    margin-left: 50px;
+    margin-top: 80px;
+}
+h5  {
+    text-align: center;
+}
+h1  {
+    margin-top: 30px;
+    text-align: center;
+}
+fieldset    {
+    width: 80%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+fieldset    {
+    margin-top: 0%;
+}
+#res  {
+    margin-left: 95%;
+    height: 30px;
+    width: 50 px;
+}
+#sub    {
+    margin-left: 5%;
+    height: 30px;
+    width: 50 px;
+}
+#select{
+    margin-left: -35px;
+}
+.container {
+    position: absolute;
+    left: 5px;
+    padding: 0;
+    margin: 0;
+}
+
+.left-element {
+    float: left;
+}
+
+.right-element {
+    position: absolute;
+    margin-left:640px;
+    float: left;
+    margin-top: 39px;
+}
+#atkDef {
+    position: absolute;
+    z-index: 100;
+    top: 710px;
+    left: 680px;
+    font-size: 15px;
+    text-align: right;
+    width: 440px;
+    font-family: "Times New Roman", Times, serif;
+}
+#cardName {
+    position: absolute;
+    z-index: 100;
+    top: 75px;
+    left: 685px;
+    font-size: 36px;
+    width: 440px;
+    font-weight: bold;
+    font-family: "Trebuchet MS";
+}
+#typeText {
+    position: absolute;
+    z-index: 100;
+    top: 594px;
+    left: 690px;
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+}
+#cardDesc {
+    position: absolute;
+    z-index: 100;
+    top: 620px;
+    left: 690px;
+    height: 70px;
+    font-size: 15px;
+    width: 420px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+
+#thumbnil
+{position: absolute;
+top: 190px;
+left: 713px;
+width: 375px;
+    height: 366px;
+    border-radius: 1px;
+}
+#download {
+    position: absolute;
+    bottom: 5px;
+    left: 370px;
+}
+hr { background-color: black;
+    height: 1px;
+    border: 0;
+    margin: 0px;}
