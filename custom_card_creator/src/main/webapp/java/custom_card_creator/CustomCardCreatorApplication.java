@@ -1,9 +1,5 @@
-package custom_card_creator;
 /**
- * 
- * @author Jaidev K
- *
- */
+package custom_card_creator;
 import java.sql.*;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
@@ -38,3 +34,4 @@ public class CustomCardCreatorApplication extends Application<CustomCardCreatorC
 	
 	
 }
+*/

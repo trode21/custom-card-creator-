@@ -1,4 +1,4 @@
-package custom_card_creator;
+/*package custom_card_creator;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -40,3 +40,4 @@ public CardObject fetch(@QueryParam("count") Optional<String> userName, Optional
 	}
 	
 }
+*/
