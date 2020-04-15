@@ -34,7 +34,7 @@ public class PokemonFactory extends HttpServlet{
 		String hitPoints = request.getParameter("HP");
 		String pokemonName = request.getParameter("name");
 		
-		BufferedImage template = ImageIO.read(new File("/custom_card_creator/src/main/webapp/resources/"
+		BufferedImage template = ImageIO.read(new File("/c3/webapps/resources/"
 				+templateName+"Templates"+"/"+typeName+".png"));
 		int w = template.getHeight();
 		int h = template.getWidth();
