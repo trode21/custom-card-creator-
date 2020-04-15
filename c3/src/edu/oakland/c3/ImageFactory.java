@@ -28,7 +28,7 @@ public class ImageFactory {
 	 */
 	public void buildImage(String templateName, String typeName, BufferedImage mainImage) throws IOException {
 		//Loads template from src/main/webapp/resources/[Pokemon/Yugioh/Whatever]Templates/[type].png
-		BufferedImage template = ImageIO.read(new File("/custom_card_creator/src/main/webapp/resources/"+templateName+"Templates"+"/"+typeName+".png"));
+		BufferedImage template = ImageIO.read(new File("/c3/webapps/resources/"+templateName+"Templates"+"/"+typeName+".png"));
 		CardImage cImage = new CardImage (mainImage);
 		int w = template.getWidth();
 		int h = template.getHeight();
@@ -58,7 +58,7 @@ public class ImageFactory {
 		 */
 		
 		//Writes image to that path you see there
-		ImageIO.write(builtImage, "PNG", new File("/custom_card_creator/src/main/java/custom_card_creator/localCards/", "builtImage.png"));
+		ImageIO.write(builtImage, "PNG", new File("/c3/localCards/", "builtImage.png"));
 	}
 	public void downloadImage(String source, String target) throws MalformedURLException, IOException, FileNotFoundException {
 		InputStream iS = null;

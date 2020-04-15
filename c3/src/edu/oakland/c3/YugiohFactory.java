@@ -27,7 +27,7 @@ public class YugiohFactory extends HttpServlet{
 		String species = request.getParameter("species");
 		String yugiohName = request.getParameter("name");
 		
-		BufferedImage template = ImageIO.read(new File("/custom_card_creator/src/main/webapp/resources/"
+		BufferedImage template = ImageIO.read(new File("/c3/webapps/resources/"
 				+ templateName + "Templates/" +typeName + ".png"));
 		int w = template.getHeight();
 		int h = template.getWidth();
@@ -48,6 +48,6 @@ public class YugiohFactory extends HttpServlet{
 		
 		
 		
-		ImageIO.write(builtImage, "PNG", new File("/custom_card_creator/src/main/java/custom_card_creator/localCards/", "builtYugioh.png"));
+		ImageIO.write(builtImage, "PNG", new File("/c3/localCards/", "builtYugioh.png"));
 	}
 }

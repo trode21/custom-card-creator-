@@ -26,7 +26,7 @@ public class MagicFactory extends HttpServlet {
         String quote = request.getParameter("quote");
         String cost = request.getParameter("cost");
         //gathering template from parameters
-        BufferedImage template = ImageIO.read(new File("/custom_card_creator/src/main/webapp/resources/"
+        BufferedImage template = ImageIO.read(new File("/c3/webapps/resources/"
                     +templateName+"Templates"+"/"+colorName+".png"));
         int w = template.getHeight();
         int h = template.getWidth();
@@ -39,6 +39,6 @@ public class MagicFactory extends HttpServlet {
         worker.drawImage(template, 0, 0, null);
         worker.drawImage(cImage.resizeImage(430 , 320, cImage.getImage()), 46, 80, null);
         //writing to specific location on the server
-        ImageIO.write(builtImage, "PNG", new File("/custom_card_creator/src/main/java/custom_card_creator/localCards/", name+sessionID+".png"));
+        ImageIO.write(builtImage, "PNG", new File("/c3/localCards/", name+sessionID+".png"));
     }
 }
