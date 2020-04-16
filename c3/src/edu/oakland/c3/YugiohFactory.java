@@ -41,12 +41,12 @@ public class YugiohFactory extends HttpServlet{
 		int x = 0;
 		int y = 0;
 		worker.drawImage(cImage.resizeImage(360, 360, cImage.getImage()), 46, 80, null);
-		worker.drawString(species, x,y);
-		worker.drawString(defense, x,y);
-		worker.drawString(attack, x,y);
-		worker.drawString(description, x,y);
-		worker.drawString(yugiohName, x,y);
-		worker.drawLine(x, y, x, y);
+		worker.drawString(species, 701,748);
+		worker.drawString(defense, 1061,860);
+		worker.drawString(attack, 994,860);
+		worker.drawString(description, 694,770);
+		worker.drawString(yugiohName, 691,247);
+		worker.drawLine(683, 844, 1125, 844);
 		
 		
 		
