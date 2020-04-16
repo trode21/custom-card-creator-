@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/pokeServlet")
 public class PokemonFactory extends HttpServlet{
 		
-	protected void buildImage(HttpServletRequest request, HttpServletResponse response)
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException
 			{
 		//Requests the information the user enters into the web site to be used in the creation of the image file.
@@ -59,11 +59,19 @@ public class PokemonFactory extends HttpServlet{
 		
 		//Writes a file to our database which allows for the user to then pull using a download button front end to then keep their image.
 		ImageIO.write(builtImage, "PNG", new File("/custom_card_creator/src/main/java/custom_card_creator/localCards/", "Pokemon - " + pokemonName + sessionID + ".png"));
+	
+			}
+		
+		public void doPost(HttpServletRequest request, HttpServletResponse response)
+				throws IOException, ServletException
+	{
+		String sessionID = request.getRequestedSessionId();
+		String pokemonName = request.getParameter("name");
 		
 		PrintWriter writer = response.getWriter();
-		String htmlResponse = "<html> <img src = /c3/localCards/" + pokemonName + sessionID + " .png></html>";
+		String htmlResponse = "<html> <img src = /c3/localCards/" + pokemonName + sessionID + ".png></html>";
 		writer.println(htmlResponse);
-		
-		
 	}
+		
+	
 }

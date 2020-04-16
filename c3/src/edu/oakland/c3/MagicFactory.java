@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/magicServlet")
 public class MagicFactory extends HttpServlet {
-    public void buildImage(HttpServletRequest request, HttpServletResponse response)
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException
     {
     	//parameters from httprequest
@@ -42,9 +42,16 @@ public class MagicFactory extends HttpServlet {
         worker.drawImage(cImage.resizeImage(430 , 320, cImage.getImage()), 46, 80, null);
         //writing to specific location on the server
         ImageIO.write(builtImage, "PNG", new File("/c3/localCards/", name+sessionID+".png"));
-        
-        PrintWriter writer = response.getWriter();
-		String htmlResponse = "<html> <img src = /c3/localCards/" + name + sessionID + " .png></html>";
+    }
+        public void doPost(HttpServletRequest request, HttpServletResponse response)
+				throws IOException, ServletException
+	{
+		String sessionID = request.getRequestedSessionId();
+		String magicName = request.getParameter("name");
+		
+		PrintWriter writer = response.getWriter();
+		String htmlResponse = "<html> <img src = /c3/localCards/" + magicName + sessionID + ".png></html>";
 		writer.println(htmlResponse);
+	
     }
 }

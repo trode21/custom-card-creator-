@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/yugiohServlet")
 public class YugiohFactory extends HttpServlet{
 	
-	public void buildImage(HttpServletRequest request, HttpServletResponse response)
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
 				throws IOException, ServletException
 	{
 		BufferedImage mainImage = (BufferedImage) request.getAttribute("image");
@@ -51,10 +51,17 @@ public class YugiohFactory extends HttpServlet{
 		
 		
 		ImageIO.write(builtImage, "PNG", new File("/c3/localCards/", "builtYugioh.png"));
+	}
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
+				throws IOException, ServletException
+	{
+		String sessionID = request.getRequestedSessionId();
+		String yugiohName = request.getParameter("name");
 		
 		PrintWriter writer = response.getWriter();
-		String htmlResponse = "<html> <img src = /c3/localCards/" + yugiohName + sessionID + " .png></html>";
+		String htmlResponse = "<html> <img src = /c3/localCards/" + yugiohName + sessionID + ".png></html>";
 		writer.println(htmlResponse);
-		
 	}
+		
+	
 }
