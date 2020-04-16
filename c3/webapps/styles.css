@@ -1,11 +1,15 @@
 /*img-show*/
 
 body{
+	/*img-show
 background-image: url(/c3/resources/frontPageImages/Background.jpg);
+img-show*/
+
+background-image: url("https://cdn.discordapp.com/attachments/664576877524025367/689978221818675323/EeveeBG.jpg");
 background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-}
+}  
 .slidershow{
   width: 301px;
   height: 400px;
