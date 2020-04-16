@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/magicServlet")
-public class MagicFactory extends HttpServlet {
+public class MagicServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException
     {

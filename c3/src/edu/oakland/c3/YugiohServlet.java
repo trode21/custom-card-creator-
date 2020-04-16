@@ -4,6 +4,7 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.io.PrintWriter;
 
 import javax.imageio.ImageIO;
@@ -13,7 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 @WebServlet("/yugiohServlet")
-public class YugiohFactory extends HttpServlet{
+public class YugiohServlet extends HttpServlet{
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 				throws IOException, ServletException
@@ -47,12 +48,15 @@ public class YugiohFactory extends HttpServlet{
 		worker.drawString(description, 694,770);
 		worker.drawString(yugiohName, 691,247);
 		worker.drawLine(683, 844, 1125, 844);
-		
-		
-		
-		ImageIO.write(builtImage, "PNG", new File("/c3/localCards/", "builtYugioh.png"));
+
+		ImageIO.write(builtImage, "PNG", new File("/c3/localCards/", yugiohName+sessionID));
+		OutputStream output = response.getOutputStream();
+		ImageIO.write(builtImage, "png", output);
+		output.close();
 	}
-	public void doPost(HttpServletRequest request, HttpServletResponse response)
+	
+	
+	/*public void doPost(HttpServletRequest request, HttpServletResponse response)
 				throws IOException, ServletException
 	{
 		String sessionID = request.getRequestedSessionId();
@@ -62,6 +66,6 @@ public class YugiohFactory extends HttpServlet{
 		String htmlResponse = "<html> <img src = /c3/localCards/" + yugiohName + sessionID + ".png></html>";
 		writer.println(htmlResponse);
 	}
-		
+	*/	
 	
 }
