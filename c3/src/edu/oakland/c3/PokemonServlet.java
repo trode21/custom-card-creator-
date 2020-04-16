@@ -39,7 +39,7 @@ public class PokemonServlet extends HttpServlet {
 		String pokemonName = request.getParameter("name");
 
 		BufferedImage template = ImageIO
-				.read(new File("/c3/webapps/resources/" + templateName + "Templates" + "/" + typeName + ".png"));
+				.read(new File("/c3/resources/" + templateName + "Templates" + "/" + typeName + ".png"));
 		int w = template.getHeight();
 		int h = template.getWidth();
 
