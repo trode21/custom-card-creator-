@@ -10,7 +10,7 @@ function addText() {
     var type = document.getElementById("monType").value;
 
     
-    document.getElementById("cardpic").src="/c3/webapps/resources/yugiohTemplates/" + cardtype.toLowerCase() + ".png";
+    document.getElementById("cardpic").src="/c3/resources/yugiohTemplates/" + cardtype.toLowerCase() + ".png";
     //combining atkdef into one value for easier formatting
     var atkDef = "<hr />ATK/" + atk + " DEF/" + def;
     
