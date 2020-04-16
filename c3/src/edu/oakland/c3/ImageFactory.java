@@ -18,7 +18,7 @@ import java.nio.channels.ReadableByteChannel;
 
 import javax.imageio.ImageIO;
 
-import org.glassfish.hk2.utilities.reflection.Logger;
+//import org.glassfish.hk2.utilities.reflection.Logger;
  
 
 public class ImageFactory {

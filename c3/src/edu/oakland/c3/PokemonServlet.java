@@ -25,7 +25,7 @@ public class PokemonServlet extends HttpServlet {
 		// creation of the image file.
 		BufferedImage mainImage = (BufferedImage) request.getAttribute("image");
 		String sessionID = request.getRequestedSessionId();
-		String templateName = "Pokemon";
+		String templateName = "pokemon";
 		String typeName = request.getParameter("type");
 		String description = request.getParameter("description");
 		String weakness = request.getParameter("weakness");
@@ -39,7 +39,7 @@ public class PokemonServlet extends HttpServlet {
 		String pokemonName = request.getParameter("name");
 
 		BufferedImage template = ImageIO
-				.read(new File("/c3/resources/" + templateName + "Templates" + "/" + typeName + ".png"));
+				.read(new File("/c3/resources/pokemonTemplates/" + typeName + ".png"));
 		int w = template.getHeight();
 		int h = template.getWidth();
 

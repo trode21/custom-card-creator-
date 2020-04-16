@@ -13,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+@SuppressWarnings("serial")
 @WebServlet("/yugiohServlet")
 public class YugiohServlet extends HttpServlet{
 	
@@ -30,8 +31,7 @@ public class YugiohServlet extends HttpServlet{
 		String species = request.getParameter("species");
 		String yugiohName = request.getParameter("name");
 		
-		BufferedImage template = ImageIO.read(new File("/c3/resources/"
-				+ templateName + "Templates/" +typeName + ".png"));
+		BufferedImage template = ImageIO.read(new File("/c3/resources/yugiohTemplates/" + typeName + ".png"));
 		int w = template.getHeight();
 		int h = template.getWidth();
 		
