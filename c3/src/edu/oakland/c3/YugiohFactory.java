@@ -4,6 +4,7 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.imageio.ImageIO;
 import javax.servlet.ServletException;
@@ -19,6 +20,7 @@ public class YugiohFactory extends HttpServlet{
 	{
 		BufferedImage mainImage = (BufferedImage) request.getAttribute("image");
 		
+		String sessionID = request.getRequestedSessionId();
 		String templateName = "Yugioh";
 		String typeName = request.getParameter("type");
 		String description = request.getParameter("description");
@@ -49,5 +51,10 @@ public class YugiohFactory extends HttpServlet{
 		
 		
 		ImageIO.write(builtImage, "PNG", new File("/c3/localCards/", "builtYugioh.png"));
+		
+		PrintWriter writer = response.getWriter();
+		String htmlResponse = "<html> <img src = /c3/localCards/" + yugiohName + sessionID + " .png></html>";
+		writer.println(htmlResponse);
+		
 	}
 }

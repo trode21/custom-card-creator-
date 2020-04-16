@@ -4,6 +4,8 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.imageio.ImageIO;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -40,5 +42,9 @@ public class MagicFactory extends HttpServlet {
         worker.drawImage(cImage.resizeImage(430 , 320, cImage.getImage()), 46, 80, null);
         //writing to specific location on the server
         ImageIO.write(builtImage, "PNG", new File("/c3/localCards/", name+sessionID+".png"));
+        
+        PrintWriter writer = response.getWriter();
+		String htmlResponse = "<html> <img src = /c3/localCards/" + name + sessionID + " .png></html>";
+		writer.println(htmlResponse);
     }
 }
