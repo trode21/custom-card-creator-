@@ -39,7 +39,7 @@ public class PokemonServlet extends HttpServlet {
 		String pokemonName = request.getParameter("name");
 
 		BufferedImage template = ImageIO
-				.read(new File("/c3/resources/pokemonTemplates/" + typeName + ".png"));
+				.read(new File("c3/resources/pokemonTemplates/" + typeName.toLowerCase() + ".png"));
 		int w = template.getHeight();
 		int h = template.getWidth();
 
@@ -62,7 +62,7 @@ public class PokemonServlet extends HttpServlet {
 
 		// Writes a file to our database which allows for the user to then pull using a
 		// download button front end to then keep their image.
-		ImageIO.write(builtImage, "png", new File("/c3/localCards/",
+		ImageIO.write(builtImage, "png", new File("c3/localCards/",
 				pokemonName+sessionID+".png"));
 		OutputStream output = response.getOutputStream();
 		ImageIO.write(builtImage, "png", output);

@@ -31,7 +31,7 @@ public class YugiohServlet extends HttpServlet{
 		String species = request.getParameter("species");
 		String yugiohName = request.getParameter("name");
 		
-		BufferedImage template = ImageIO.read(new File("/c3/resources/yugiohTemplates/" + typeName + ".png"));
+		BufferedImage template = ImageIO.read(new File("c3/resources/yugiohTemplates/" + typeName.toLowerCase() + ".png"));
 		int w = template.getHeight();
 		int h = template.getWidth();
 		
@@ -49,7 +49,7 @@ public class YugiohServlet extends HttpServlet{
 		worker.drawString(yugiohName, 691,247);
 		worker.drawLine(683, 844, 1125, 844);
 
-		ImageIO.write(builtImage, "PNG", new File("/c3/localCards/", yugiohName+sessionID));
+		ImageIO.write(builtImage, "PNG", new File("c3/localCards/", yugiohName+sessionID));
 		OutputStream output = response.getOutputStream();
 		ImageIO.write(builtImage, "png", output);
 		output.close();
